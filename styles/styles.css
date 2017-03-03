@@ -61,7 +61,10 @@ body {
 	color: #fff;
 }
 
+
 /* banner styles */
+
+
 .banner {
 	background: #3c4955 url(../images/computer.jpeg) center center no-repeat;
 	background-size: cover;
@@ -143,21 +146,23 @@ body {
 	margin-top: 43px;
 }
 
+
 /* styles for .portfolio section */
+
 
 .portfolio {
 	width: 1140px;
 	margin: 0 auto;
-	padding: 50px 0 0;
+	padding: 40px 0;
 }
 
-.projects {
+.controls {
 	display: inline-block;
 	vertical-align: middle;
 	margin-left: 200px;
 }
 
-.projects ul li {
+.controls li {
 	display: inline-block;
 	font-size: 0;
 	margin-right: 10px;
@@ -179,30 +184,71 @@ body {
 	background-color: #48bf72;
 	color: #ffffff;
 	transition: .2s ease-in;
+	cursor: pointer;
 }
 
 .portfolio-items {
-	margin: 25px 0 90px 0;
+	position: relative;
+	height: 830px;
 }
 
-.portfolio-items a {
-	display: inline-block;
-	vertical-align: top;
+.portfolio-items .item {
+	position: absolute;
 }
 
-.item-two {
-	margin-left: 20px;
+.item img {
+	display: block;
+	border-radius: 10px;
 }
 
-.item-three {
-	margin: -120px 20px 0 0;
+.item.item1 {
+	top: 0;
+	left: 0;
 }
 
-.item-four {
-	margin-top: 15px;
+.item.item2 {
+	top: 0;
+	right: 0;
 }
+
+.item.item3 {
+	bottom: 0;
+	left: 0;
+}
+
+.item.item4 {
+	bottom: 0;
+	right: 0;
+}
+
+.item_description {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	border-radius: 10px;
+	background-color: rgba(72, 191, 114, 0.9);
+	text-align: center;
+	opacity: 0;
+	transition: opacity .3s cubic-bezier(0.15, 0.54, 1, 0.5);
+	cursor: pointer;
+}
+
+.centered {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.item:hover .item_description {
+	opacity: 1;
+}
+
 
 /* styles for .about-me section */
+
 
 .about-me {
 	background: #3c4955 url(../images/man.jpg) center center no-repeat;
@@ -244,7 +290,9 @@ body {
 	transition: .2s ease-in;
 }
 
+
 /* styles for .contact-form section */
+
 
 .contact-form {
 	width: 1140px;
@@ -320,6 +368,7 @@ textarea {
 
 
 /* styles for .footer */
+
 
 .footer {
 	margin: 0 auto;
