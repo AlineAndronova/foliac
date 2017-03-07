@@ -76,24 +76,22 @@ body {
 	padding: 36px 0;
 }
 
-.logo, .navigation {
-	display: inline-block;
-	vertical-align: middle;
+.logo {
+	float: left;
 }
 
 .navigation {
-	margin-left: 410px;
+	float: right;
 }
 
 .navigation ul {
 	list-style-type: none;
-	font-size: 0;
 	padding: 0;
+	margin-top: 40px;
 }
 
 .navigation ul li {
-	display: inline-block;
-	font-size: 16px;
+	float: left;
 }
 
 .navigation ul li + li {
